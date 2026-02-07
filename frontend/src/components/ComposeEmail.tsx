@@ -21,7 +21,7 @@ export default function ComposeEmail({ onClose, onSuccess }: ComposeEmailProps) 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const uploadedFile = e.target.files?.[0];
     if (uploadedFile) {
-      
+      setFile(uploadedFile);
       const reader = new FileReader();
       reader.onload = (event) => {
         const text = event.target?.result as string;
